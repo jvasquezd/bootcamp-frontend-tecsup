@@ -23,8 +23,8 @@
 .hero {
     /* display: flex; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     background-image: url(https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp);
     /**Quiero que no se deforme la imagen**/
     background-size: cover;
@@ -53,12 +53,16 @@
     /* Borde de la tarjeta */
     border: 0.125rem solid var(--primary-text-color);
     border-radius: 1rem;
-    max-width: 320px;
+    max-width: 360px;
     /* Divide el espacio que esta vacio lo divide en 2 y 
-    lo pone al costado del elemento */
+    lo pone a los costado del elemento (los espacios vacios)*/
     margin: auto;
     /* ocultar lo que la imagen se sale de la carta */
     overflow: hidden;
+}
+
+.card:hover{
+    border:0.125rem solid var(--primary-highlight-color);
 }
 
 
