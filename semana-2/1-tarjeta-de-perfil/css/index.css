@@ -1,13 +1,15 @@
 :root{
-    --primary-theme-color: #170b2abf;
+    --primary-theme-color: #170b2a;
     --secondary-theme-color: #1f104f;
+    --primary-shadow-color: #170b2abf;
+    --secondary-shadow-color: #1f104f;
     --primary-text-color: #FFFFFF;
     --primary-highlight-color: #61dafb;
     --primary-font-family: monospace;
 }
 
 .body{
-    background-color: var(--primary-theme-color);
+    background-color: var(--primary-shadow-color);
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     margin: 0;
@@ -47,8 +49,7 @@
 } */
 
 .card {
-
-    background-color: var(--primary-theme-color);
+    /* background-color: var(--primary-theme-color); */
     /* Borde de la tarjeta */
     border: 0.125rem solid var(--primary-text-color);
     border-radius: 1rem;
@@ -58,7 +59,24 @@
     margin: auto;
     /* Divide el espacio que esta vacio lo divide en 2 y 
     lo pone al costado del elemento */
+}
 
+/* Margin y Padding solo funcionan con elementos 
+de block, no funciona con elementos inline */
+.card__header {
+    background-color: var(--primary-shadow-color);
+    text-align: center;
+    padding: 1rem;
+}
+/* Las imagenes son elementos INLINE */
+.card__img{
+    background-color: var(--primary-theme-color);
+    border-radius: 50%;
+    /* Imagen Responsive */
+    /* El 100% analiza y refiere el tamaño del padre */
+    width: min(100%,256px);
+    /* Truco para que la imagen no se deforme */
+    object-fit: cover;
 }
 
 /* .menu {
