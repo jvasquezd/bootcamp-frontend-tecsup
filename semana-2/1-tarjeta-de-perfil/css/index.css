@@ -61,8 +61,9 @@
     overflow: hidden;
 }
 
-.card:hover{
-    border:0.125rem solid var(--primary-highlight-color);
+/* La pseudoclase se basa en el estado del elemento */
+.card:hover {
+    border: 0.125rem solid var(--primary-highlight-color);
 }
 
 
@@ -118,6 +119,16 @@ de block, no funciona con elementos inline */
     font-size: 1rem;
     text-align: center;
     margin: 0;
+}
+
+/* El pseudoelemento se basa en selecciona ro crear
+elementos */
+.card__text::before {
+    content: '❤';
+}
+
+.card__text::after {
+    content: '❤';
 }
 
 /* La propieda inline sola no trabaja como caja */
