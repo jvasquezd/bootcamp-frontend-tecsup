@@ -1,7 +1,15 @@
+:root{
+    --primary-theme-color: #170b2a;
+    --secondary-theme-color: #1f104f;
+    --primary-text-color: #FFFFFF;
+    --primary-highlight-color: #61dafb;
+    --primary-font-family: monospace;
+}
+
 .body{
-    background-color: #170b2a;
-    color: #FFFFFF;
+    background-color: var(--primary-theme-color);
+    color: var(--primary-text-color);
     margin: 0;
     /**none se utiliza para resetear propiedades**/
-    font-family: monospace;
+    font-family: var(--primary-font-family);
 }
