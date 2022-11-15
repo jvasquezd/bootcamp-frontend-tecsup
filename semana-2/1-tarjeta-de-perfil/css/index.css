@@ -1,5 +1,5 @@
 :root{
-    --primary-theme-color: #170b2a;
+    --primary-theme-color: #170b2abf;
     --secondary-theme-color: #1f104f;
     --primary-text-color: #FFFFFF;
     --primary-highlight-color: #61dafb;
@@ -9,7 +9,58 @@
 .body{
     background-color: var(--primary-theme-color);
     color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
     margin: 0;
     /**none se utiliza para resetear propiedades**/
-    font-family: var(--primary-font-family);
 }
+
+/**display: flex; flexibiliza elementos**/
+/**.element{
+    display: flex;
+}**/
+
+.hero{
+    /* display: flex; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp);
+    /**Quiero que no se deforme**/
+    background-size: cover;
+    /**Quiero que este centrado**/
+    background-position: center;
+    /**Quiero q ocupe todo el alto**/
+    min-height: 100vh; /**Altura minima**/
+    /****/
+    /**width: 100%;**/
+    /**centrar verticalmente**/
+    /**align-items: center;**/
+    /**centrar horizontalmente**/
+    /* justify-content: center; */
+}
+
+
+/* .card {
+    max-width: 256px;
+    display: flex;
+    flex-direction: column;
+} */
+
+.card {
+
+    background-color: var(--primary-theme-color);
+    /* Borde de la tarjeta */
+    border: 0.125rem solid var(--primary-text-color);
+    border-radius: 1rem;
+    /* ocultar lo que la imagen se sale de la carta */
+    overflow: hidden;
+    max-width: 320px;
+    margin: auto;
+    /* Divide el espacio que esta vacio lo divide en 2 y 
+    lo pone al costado del elemento */
+
+}
+
+/* .menu {
+    display: flex;
+} */
