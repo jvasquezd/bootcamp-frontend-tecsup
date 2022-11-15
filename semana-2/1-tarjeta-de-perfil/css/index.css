@@ -1,14 +1,13 @@
-:root{
-    --primary-theme-color: #170b2a;
-    --secondary-theme-color: #1f104f;
-    --primary-shadow-color: #170b2abf;
-    --secondary-shadow-color: #1f104f;
-    --primary-text-color: #FFFFFF;
+:root {
+    --primary-theme-color: #20232a;
+    --primary-shadow-color: #20232abf;
+    --secondary-shadow-color: #282c34bf;
+    --primary-text-color: #fff;
     --primary-highlight-color: #61dafb;
     --primary-font-family: monospace;
 }
 
-.body{
+.body {
     background-color: var(--primary-shadow-color);
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
@@ -21,18 +20,19 @@
     display: flex;
 }**/
 
-.hero{
+.hero {
     /* display: flex; */
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp);
-    /**Quiero que no se deforme**/
+    /**Quiero que no se deforme la imagen**/
     background-size: cover;
-    /**Quiero que este centrado**/
+    /**Quiero que este centrado la imagen**/
     background-position: center;
     /**Quiero q ocupe todo el alto**/
-    min-height: 100vh; /**Altura minima**/
+    min-height: 100vh;
+    /**Altura minima**/
     /****/
     /**width: 100%;**/
     /**centrar verticalmente**/
@@ -53,13 +53,15 @@
     /* Borde de la tarjeta */
     border: 0.125rem solid var(--primary-text-color);
     border-radius: 1rem;
-    /* ocultar lo que la imagen se sale de la carta */
-    overflow: hidden;
     max-width: 320px;
-    margin: auto;
     /* Divide el espacio que esta vacio lo divide en 2 y 
     lo pone al costado del elemento */
+    margin: auto;
+    /* ocultar lo que la imagen se sale de la carta */
+    overflow: hidden;
 }
+
+
 
 /* Margin y Padding solo funcionan con elementos 
 de block, no funciona con elementos inline */
@@ -68,13 +70,15 @@ de block, no funciona con elementos inline */
     text-align: center;
     padding: 1rem;
 }
+
 /* Las imagenes son elementos INLINE */
-.card__img{
+.card__img {
     background-color: var(--primary-theme-color);
     border-radius: 50%;
     /* Imagen Responsive */
     /* El 100% analiza y refiere el tamaño del padre */
-    width: min(100%,256px);
+    width: min(100%, 256px);
+    height: 256px;
     /* Truco para que la imagen no se deforme */
     object-fit: cover;
 }
@@ -82,3 +86,72 @@ de block, no funciona con elementos inline */
 /* .menu {
     display: flex;
 } */
+
+.card__body {
+    display: flex;
+    /** Acomoda a sus hijos en filas**/
+    flex-direction: column;
+    /**Con esta propiedad lo ponemos en columna**/
+    gap: 0.5rem;
+    background-color: var(--secondary-shadow-color);
+    padding: 1rem;
+}
+
+
+.card__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.card__subtitle {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0;
+}
+
+.card__text {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* La propieda inline sola no trabaja como caja */
+
+/* Display flex ya no se aplica a los elementos
+si no se aplica a un contenedor, y sus hijos directos
+o adyacentes van a tener esta propiedad de flex.
+
+Para que los hijos ocupen el espacio minimo displonible
+
+ */
+
+/* 
+.box-container{
+    display: flex;
+}
+
+.box-element{
+    border: 2px solid yellow;
+    background-color: red;
+    width:32px;
+    height:32px;
+}
+*/
+
+
+.card__footer {
+    background-color: var(--primary-shadow-color);
+    padding: 1rem;
+}
+
+.menu {
+    /* Para poner los elementos en linea  usamos el display flex*/
+    display: flex;
+    /* Centrar los elementos */
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
