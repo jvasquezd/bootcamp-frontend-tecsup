@@ -1,40 +1,9 @@
 @import './modules/variables.css';
+@import './modules/header.css';
 
 .body {
     background-color: var(--primary-theme-color);
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     margin: 0;
-}
-
-.container {
-    /* limitar el ancho maximo */
-    max-width: var(--max-width-container);
-    margin: auto;
-    padding-left: var(--padding-container);
-    padding-right: var(--padding-container);
-    /* Poner elementos en linea */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu {
-    /* Para poner los elementos en linea  usamos el display flex*/
-    display: flex;
-    /* Centrar los elementos */
-    /* justify-content: center; */
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu__link{
-    color: var(--primary-text-color);
-    text-decoration: none;
-}
-
-.menu__link:hover {
-    color: var(--primary-highlight-color);
 }
