@@ -1,0 +1,21 @@
+.f-direction-column {
+  flex-direction: column;
+}
+.gap-xs{
+  gap: calc(var(--padding-section)*0.25);
+}
+
+.gap-sm {
+  gap: calc(var(--padding-section) * 0.5);
+}
+
+.gap-md {
+  gap: calc(var(--padding-section));
+}
+
+.gap-ld{
+  gap: calc(var(--padding-section)*1.25);
+}
+.gap-xld{
+  gap: calc(var(--padding-section)*1.5);
+}
