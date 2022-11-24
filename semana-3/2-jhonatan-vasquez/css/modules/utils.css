@@ -1,3 +1,11 @@
+.p-relative {
+  position: relative;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 .f-direction-column {
   flex-direction: column;
 }
@@ -18,4 +26,11 @@
 }
 .gap-xld{
   gap: calc(var(--padding-section)*1.5);
+}
+
+
+@media (min-width: 768px) {
+  .md\:f-direction-row {
+    flex-direction: row;
+  }
 }
