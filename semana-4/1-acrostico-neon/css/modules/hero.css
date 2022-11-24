@@ -1,0 +1,35 @@
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero__name {
+    font-size: 3rem;
+}
+
+.hero__letter:nth-child(1) {
+    color: #00bef8;
+}
+.hero__letter:nth-child(2) {
+    color: #ff0697;
+}
+.hero__letter:nth-child(3) {
+    color: #ff4d00;
+}
+.hero__letter:nth-child(4) {
+    color: #ffe600;
+}
+.hero__letter:nth-child(5) {
+    color: #bb00ff;
+}
+.hero__letter:nth-child(6) {
+    color: #f5f5f5;
+}
+.hero__letter:nth-child(7) {
+    color: #f5926b;
+}
+.hero__letter:nth-child(8) {
+    color: #fff;
+}
