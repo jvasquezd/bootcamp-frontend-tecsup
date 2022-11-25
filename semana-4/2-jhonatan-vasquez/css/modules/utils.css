@@ -1,0 +1,29 @@
+.d-none {
+  display: none;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.f-direction-column {
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: calc(var(--padding-section) * 0.5);
+}
+
+.gap-md {
+  gap: var(--padding-section);
+}
+
+@media (min-width: 768px) {
+  .md\:d-block {
+    display: block;
+  }
+
+  .md\:f-direction-row {
+    flex-direction: row;
+  }
+}
