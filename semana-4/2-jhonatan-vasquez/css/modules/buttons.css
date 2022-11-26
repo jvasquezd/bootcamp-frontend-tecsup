@@ -27,6 +27,16 @@
   box-shadow: 0 0 0.25rem 0.0625rem var(--primary-highlight-color);
 }
 
+.button--secondary {
+  background-color: var(--secondary-button-color);
+  border: 0.0625rem solid var(--secondary-button-color);
+  color: var(--reverse-primary-text-color);
+}
+
+.button--secondary:hover {
+  box-shadow: 0 0 0.25rem 0.0625rem var(--primary-button-color);
+}
+
 .button--outline-primary {
   background-color: transparent;
   border: 0.0625rem solid var(--primary-highlight-color);
@@ -34,4 +44,14 @@
 
 .button--outline-primary:hover {
   box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
+}
+
+
+.button--outline-secondary {
+  background-color: transparent;
+  border: 0.0625rem solid var(--secondary-button-color);
+}
+
+.button--outline-secondary:hover {
+  box-shadow: 0 0 0.25rem 0 var(--secondary-button-color);
 }
