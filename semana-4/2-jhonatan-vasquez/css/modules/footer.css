@@ -1,0 +1,16 @@
+.footer {
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-theme-color);
+    box-shadow: 0 0 0.125rem 0.125rem var(--primary-shadow-color);
+}
+
+.footer__title {
+    font-size: 0.875rem;
+}
+.footer__link{
+    color: var(--primary-highlight-color);
+    text-decoration: none;
+}

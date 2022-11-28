@@ -50,3 +50,15 @@
     height: auto;
   }
 }
+
+
+.list__img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.list__img:hover {
+  filter: opacity(0.9);
+  transform: scale(1.25);
+}
