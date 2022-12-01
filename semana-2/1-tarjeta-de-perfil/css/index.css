@@ -1,3 +1,11 @@
+/* Definimos las variables de css en el root. 
+La Pseudoclase :root de CSS selecciona el 
+elemento raíz de un árbol que representa el 
+documento. En HTML, :root representa el elemento <html>
+ y es idéntico al selector html, excepto que su especificidad es mayor. 
+
+ Nota:
+:root puede ser útil para declarar variables CSS globales: */
 :root {
     --primary-theme-color: #20232a;
     --primary-shadow-color: #20232abf;
@@ -12,8 +20,9 @@
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     margin: 0;
-    /**none se utiliza para resetear propiedades**/
+    /**El valor none se utiliza para resetear propiedades de una etiqueta html**/
 }
+/* Hay etiquetas que ya tienen estilos predefinidos. */
 
 /**display: flex; flexibiliza elementos**/
 /**.element{
