@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime</title>
+  <link rel="shortcut icon"
+    href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ca82e6c0-3581-4ab3-9d7e-cc22f53b0d0d/d85qnyq-75ef597a-9f2d-446f-9439-38e8da748c4b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NhODJlNmMwLTM1ODEtNGFiMy05ZDdlLWNjMjJmNTNiMGQwZFwvZDg1cW55cS03NWVmNTk3YS05ZjJkLTQ0NmYtOTQzOS0zOGU4ZGE3NDhjNGIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3pW16iaBMIiSwFfQozG8SepopxbpxUOy5pHdKwMOnRg"
+    type="image/x-icon" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+</head>
+
+<body class="bg-dark text-light">
+  <header class="fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="https://images.hdqwalls.com/download/goku-anime-4k-m5-1920x1080.jpg" class="d-flex" alt="Imagen 1"
+              width="256" height="144" style="width: 100%; height: 100vh; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+              <button class="btn btn-primary">Primary</button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://wallpapercave.com/wp/wp5203288.jpg" class="d-flex" alt="Imagen 2" width="256" height="144"
+              style="width: 100%; height: 100vh; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+              <button class="btn btn-primary">Primary</button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://fondosmil.com/fondo/67388.jpg" class="d-flex" alt="Imagen 3" width="256" height="144"
+              style="width: 100%; height: 100vh; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+              <button class="btn btn-primary">Primary</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container d-flex flex-column gap-4">
+        <h2 class="text-center">Animes</h2>
+        <div class="row d-flex justify-content-center g-4">
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+              style="width: min(100%, 18rem);">
+              <img src="https://wallpapercave.com/wp/Pzb3LkG.jpg" class="card-img-top" alt="Anime 1" width="256"
+                height="144" style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+              style="width: min(100%, 18rem);">
+              <img
+                src="https://www.latercera.com/resizer/SwWBcjglX_OYC6i5utWIWybGu8E=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/IXY7EKRLAZB4DJ7REVD7STNH44.jpg"
+                class="card-img-top" alt="Anime 2" width="256" height="144"
+                style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+              style="width: min(100%, 18rem);">
+              <img src="https://i.blogs.es/0bbe7c/netflix-neon-genesis-evangelion-espinof-ver-en-orden/840_560.jpg"
+                class="card-img-top" alt="Anime 3" width="256" height="144"
+                style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto" width="256" height="144"
+              style="width: min(100%, 18rem);">
+              <img
+                src="https://noticias.animeonegai.com/wp-content/uploads/2022/09/Katekyo-Hitman-Reborn-anime-min-2.jpg"
+                class="card-img-top" alt="Anime 4" width="256" height="144"
+                style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+              style="width: min(100%, 18rem);">
+              <img
+                src="https://4.bp.blogspot.com/-YxKJxL_qzvQ/XUZAOEHwiZI/AAAAAAAAmYs/lAnqYsvs_L0aJEkOVZc2KS2m-PuzNDOFQCLcBGAs/s1600/episodio-one-piece-sin-relleno.jpg"
+                class="card-img-top" alt="Anime 5" width="256" height="144"
+                style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+              style="width: min(100%, 18rem);">
+              <img src="https://somoskudasai.com/wp-content/uploads/2020/08/portada_gintama-7.jpg" class="card-img-top"
+                alt="Anime 6" style="width: 100%; height: 192px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container d-flex flex-column gap-4">
+        <h2 class="text-center">Top</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card text-bg-dark">
+              <img src="https://i.redd.it/5fx6wbxa45951.jpg" class="card-img opacity-50" alt="Top 1" width="256"
+                height="144" style="width: 100%; height: 320px; object-fit: cover;">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-bg-dark">
+              <img src="https://wallpaperaccess.com/full/17350.jpg" class="card-img opacity-50" alt="Top 2" width="256"
+                height="144" style="width: 100%; height: 320px; object-fit: cover;">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-bg-dark">
+              <img src="https://images.alphacoders.com/605/605799.jpg" class="card-img opacity-50" alt="Top 3"
+                width="256" height="144" style="width: 100%; height: 320px; object-fit: cover;">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-bg-dark">
+              <img
+                src="https://coolthemestores.com/wp-content/uploads/2021/09/neon-genesis-evangelion-wallpaper-background.jpg"
+                class="card-img opacity-50" alt="Top 4" width="256" height="144"
+                style="width: 100%; height: 320px; object-fit: cover;">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href="#!" class="text-white text-decoration-none">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">Bootstrap Angular</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href="#!" class="text-white text-decoration-none">Your Account</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white text-decoration-none">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2022 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">Elliot Garamendi</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
