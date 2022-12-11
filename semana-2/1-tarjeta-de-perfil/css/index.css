@@ -32,11 +32,12 @@ documento. En HTML, :root representa el elemento <html>
 
 .hero {
     /* display: flex; */
-    display: flex;
+    display: flex;/*Junto con el margin:auto del card, ya que margin: auto
+    toma el espacio en blanco y lo ordena.*/
     /* align-items: center;
     justify-content: center; */
     /*Asignar imagen al hero*/
-    background-image: url('../img/led.webp');
+    background-image: url('../img/fondo_tarjeta_perfil.webp');
     /**Quiero que no se deforme la imagen, ademas que no se repita**/
     background-size: cover;
     /**Quiero que este centrado la imagen**/
@@ -100,10 +101,12 @@ de block, no funciona con elementos inline */
 /* Las imagenes son elementos INLINE */
 .card__img {
     background-color: var(--primary-theme-color);
-    border-radius: 50%;
+    
+    border-radius: 50%;/*Para hacer la imagen circular*/
     /* Imagen Responsive */
     /* El 100% analiza y refiere el tamaño del padre */
-    width: min(100%, 256px);
+    width: min(100%, 256px);/*min(100%, 256px) analiza el menor entre valores, El 100%
+    hace referencia al padre.*/
     height: 256px;
     /* Truco para que la imagen no se deforme */
     object-fit: cover;
@@ -115,32 +118,49 @@ de block, no funciona con elementos inline */
 } */
 
 .card__body {
-    display: flex;
-    /** Acomoda a sus hijos en filas**/
-    flex-direction: column;
+    display: flex; /*Permite q cada box() se ponga uno a lado del otro*/
+    /* Usar display:inline; es un problema en card__body ya que inline no trabaja como caja, en 
+    todo caso se podria combinar display:inline-block; pero esto te da una
+    separacion innecesaria */
+
+    /* El display:flex; esto ya no se aplica a los elementos, se aplica a un contenedor
+    Y sus hijos directos o adyacentes van a tener las propiedad de flex-items. Esto hace que
+    se pongan en linea pero sin espacios raros como display:inline-block;. Esto organiza
+    a los hijos para que ocupen el menor espacio disponible */
+
+    /*Con el display:flex; si tengo una altura de 64px height:64px puedo usar
+    align-items: flex-end; justify-content: flex-end y lo colocamos en la parte final 
+    de la derecha. Esto se cumple solo cuando la direccion es fila flex-direction:row.
+    Pero tambien se puede colocar en columna flex-direction:column;*/
+    
+
+    /** Acomoda a sus hijos en columnas**/
     /**Con esta propiedad lo ponemos en columna**/
-    gap: 0.5rem;
+    flex-direction: column;
+   
+    gap: 0.5rem;/*Agregamos espacio*/
+
     background-color: var(--secondary-shadow-color);
-    padding: 1rem;
+    padding: 1rem;/*Espacio q empuja hacia afuera*/
 }
 
 
 .card__title {
     font-size: 1.5rem;
     text-align: center;
-    margin: 0;
+    margin: 0; /*Resetea los estilos de margin a 0*/
 }
 
 .card__subtitle {
     font-size: 1.25rem;
     text-align: center;
-    margin: 0;
+    margin: 0; /*Resetea los estilos de margin a 0*/
 }
 
 .card__text {
     font-size: 1rem;
     text-align: center;
-    margin: 0;
+    margin: 0; /*Resetea los estilos de margin a 0*/
 }
 
 /* El pseudoelemento se basa en selecciona ro crear
@@ -226,3 +246,6 @@ Para que los hijos ocupen el espacio minimo displonible
       font-size: 2rem;
     }
   }
+
+  /* 100% referencia al padre */
+  /* Color blanco #fff, white, rgb(255,255,255) */
