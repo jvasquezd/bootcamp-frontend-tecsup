@@ -16,10 +16,10 @@ documento. En HTML, :root representa el elemento <html>
 }
 
 .body {
-    background-color: var(--primary-shadow-color);
-    color: var(--primary-text-color);
-    font-family: var(--primary-font-family);
-    margin: 0;
+    background-color: var(--primary-shadow-color); /*Color del contenedor*/
+    color: var(--primary-text-color); /*Color de texto*/
+    font-family: var(--primary-font-family); /*Tipo de fuente*/
+    margin: 0; /*Contenido sin margenes*/
     /**El valor none se utiliza para resetear propiedades de una etiqueta html**/
 }
 /* Hay etiquetas que ya tienen estilos predefinidos. */
@@ -34,13 +34,22 @@ documento. En HTML, :root representa el elemento <html>
     display: flex;
     /* align-items: center;
     justify-content: center; */
+    /*Asignar imagen al hero*/
     background-image: url(https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp);
-    /**Quiero que no se deforme la imagen**/
+    /**Quiero que no se deforme la imagen, ademas que no se repita**/
     background-size: cover;
     /**Quiero que este centrado la imagen**/
     background-position: center;
     /**Quiero q ocupe todo el alto**/
-    min-height: 100vh;
+    min-height: 100vh; /*min-height: Especifica la altura minima del contenido
+    - 16px == 1rem
+    - Para el hero se necesita alturas relativas, pero en este ejemplo quiero q 
+    ocupe la altura de mi ventana, el 100% es una opcion
+    siempre y cuando la altura la tenga el padre. Ahora si quiero que la imagen
+    ocupe todo el ancho uso: 100vh si quiero todo el ancho es 100vw.
+    El 100vh hace que desaparezca el scroll y se adecue a la pantalla
+    
+    */
     /**Altura minima**/
     /****/
     /**width: 100%;**/
@@ -62,12 +71,12 @@ documento. En HTML, :root representa el elemento <html>
     /* Borde de la tarjeta */
     border: 0.125rem solid var(--primary-text-color);
     border-radius: 1rem;
-    max-width: 360px;
-    /* Divide el espacio que esta vacio lo divide en 2 y 
+    max-width: 360px; /*Ancho maximo a la tarjeta de  360px*/
+    margin: auto;/*Para que la tarjeta se centre dentro del articulo, ya que esta dejando
+    un espacio se usa la propiedad margin auto que Divide el espacio que esta vacio lo divide en 2 y 
     lo pone a los costado del elemento (los espacios vacios)*/
-    margin: auto;
-    /* ocultar lo que la imagen se sale de la carta */
-    overflow: hidden;
+    overflow: hidden; /*Como la imagen se esta saliendo, quiero ocultar lo que la imagen se sale de la carta,
+    para eso uso la propiedad overflow: hidden */
 }
 
 /* La pseudoclase se basa en el estado del elemento */
@@ -77,12 +86,12 @@ documento. En HTML, :root representa el elemento <html>
 
 
 
-/* Margin y Padding solo funcionan con elementos 
+/*El Margin y Padding solo funcionan con elementos 
 de block, no funciona con elementos inline */
 .card__header {
     background-color: var(--primary-shadow-color);
-    text-align: center;
-    padding: 1rem;
+    text-align: center; /*  centrar la imagen*/
+    padding: 1rem; /*  */
 }
 
 /* Las imagenes son elementos INLINE */
@@ -95,6 +104,7 @@ de block, no funciona con elementos inline */
     height: 256px;
     /* Truco para que la imagen no se deforme */
     object-fit: cover;
+    /* Se puede mezclar block con inline display: inline-block*/
 }
 
 /* .menu {
