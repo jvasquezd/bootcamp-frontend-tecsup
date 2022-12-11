@@ -7,6 +7,7 @@ documento. En HTML, :root representa el elemento <html>
  Nota:
 :root puede ser útil para declarar variables CSS globales: */
 :root {
+    scroll-behavior: smooth;
     --primary-theme-color: #20232a;
     --primary-shadow-color: #20232abf;
     --secondary-shadow-color: #282c34bf;
@@ -35,7 +36,7 @@ documento. En HTML, :root representa el elemento <html>
     /* align-items: center;
     justify-content: center; */
     /*Asignar imagen al hero*/
-    background-image: url(https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp);
+    background-image: url('../img/led.webp');
     /**Quiero que no se deforme la imagen, ademas que no se repita**/
     background-size: cover;
     /**Quiero que este centrado la imagen**/
@@ -57,6 +58,7 @@ documento. En HTML, :root representa el elemento <html>
     /**align-items: center;**/
     /**centrar horizontalmente**/
     /* justify-content: center; */
+    align-items: center;
 }
 
 
@@ -71,12 +73,13 @@ documento. En HTML, :root representa el elemento <html>
     /* Borde de la tarjeta */
     border: 0.125rem solid var(--primary-text-color);
     border-radius: 1rem;
-    max-width: 360px; /*Ancho maximo a la tarjeta de  360px*/
+    max-width: 320px; /*Ancho maximo a la tarjeta de  360px*/
     margin: auto;/*Para que la tarjeta se centre dentro del articulo, ya que esta dejando
     un espacio se usa la propiedad margin auto que Divide el espacio que esta vacio lo divide en 2 y 
     lo pone a los costado del elemento (los espacios vacios)*/
     overflow: hidden; /*Como la imagen se esta saliendo, quiero ocultar lo que la imagen se sale de la carta,
     para eso uso la propiedad overflow: hidden */
+    box-sizing: border-box;
 }
 
 /* La pseudoclase se basa en el estado del elemento */
@@ -184,8 +187,42 @@ Para que los hijos ocupen el espacio minimo displonible
     display: flex;
     /* Centrar los elementos */
     justify-content: center;
-    gap: 0.5rem;
-    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
+
+.menu__link {
+    display: flex;
+    color: var(--primary-text-color);
+    font-size: 1.75rem;
+}
+
+
+.menu__link:hover {
+    transform: scale(1.125);
+}
+
+@media (min-width: 768px) {
+    .card {
+      max-width: 512px;
+    }
+  
+    .card__title {
+      font-size: 1.75rem;
+    }
+  
+    .card__subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .card__text {
+      font-size: 1.25rem;
+    }
+  
+    .menu__link {
+      font-size: 2rem;
+    }
+  }
