@@ -10,18 +10,24 @@
 
 .container {
     /* limitar el ancho maximo */
-    max-width: var(--max-width-container);
-    margin: auto;
-    padding-left: var(--padding-container);
-    padding-right: var(--padding-container);
+    max-width: var(--max-width-container);/*Asignar el ancho maximo
+    del container*/
+    margin: auto;/*Como en el max-width le he dado un ancho maximo
+    va a quedar espacios vacios. EL truco para coger el espacio vacio
+    y dividirlo y ponerlo a los costados es usar margin:auto; */
+    padding-left: var(--padding-container);/*Espacio q Empuja hacia adentro en el lado izquierdo*/
+    padding-right: var(--padding-container);/*Espacio q Empuja hacia adentro en el lado derecho*/
     /* Poner elementos en linea */
     display: flex;
+    /* Centrar los elementos */
     align-items: center;
+    /* Dar espacio entre los elementos */
     justify-content: space-between;
 }
 
 .menu {
     /* Para poner los elementos en linea  usamos el display flex*/
+    /* display:flex para poner los elementos en fila */
     display: flex;
     /* Centrar los elementos */
     /* justify-content: center; */
