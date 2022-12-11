@@ -1,3 +1,4 @@
+/* Como list es un bloque se le genera su propio archivo */
 .list {
   list-style: none;
   margin: 0;

@@ -1,8 +1,18 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;/*Fijar el header de la pagina web. Esto sirve para fijar la barra de
+  navegacion.*/
+  top: 0;/*Con top:0 se pone todo arriba a una distancia cero de arriba*/
+  left: 0;/*Con left:0 se pega al izquierda a una distancia cero de la izquierda*/
+  /*Si tambien pongo right:0 el header se estira para que este una distancia
+  cero de la izquierda y una distancia cero de la derecha*/
+  /* right: 0; */
+  width: 100%;/*Quiero el 100% del viewport, esto hace q se estire todo el header*/
   background-color: var(--primary-theme-color);
   box-shadow: 0 0 0.125rem 0.125rem var(--primary-shadow-color);
 }
+
+/* Cuando al header, le ponemos position: absolute; este se sale
+del bloque de la pagina web, y el bloque q estaba debajo del header, en este caso el 
+hero, sube y lo reemplaza.
+
+El position: fixed solo afecta al padre, y no a sus hijos*/

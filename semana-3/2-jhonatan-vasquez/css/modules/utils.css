@@ -9,23 +9,32 @@
 .f-direction-column {
   flex-direction: column;
 }
+
 .gap-xs{
   gap: calc(var(--padding-section)*0.25);
 }
-
+/* Se usa calc() para obtener el 50% del valor */
 .gap-sm {
   gap: calc(var(--padding-section) * 0.5);
 }
-
+/* gap base */
 .gap-md {
   gap: calc(var(--padding-section));
 }
 
-.gap-ld{
+.gap-lg {
   gap: calc(var(--padding-section)*1.25);
 }
-.gap-xld{
+.gap-xl {
   gap: calc(var(--padding-section)*1.5);
+}
+
+.gap-2xl {
+  gap: calc(var(--padding-section)*1.75);
+}
+
+.gap-3xl {
+  gap: calc(var(--padding-section)*2);
 }
 
 

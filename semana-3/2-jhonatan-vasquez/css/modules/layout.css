@@ -11,19 +11,25 @@
   min-height: 100vh;
 }
 
-.container {
-  max-width: var(--max-width-container);
-  margin: 0 auto;
+
+/* Container tiene 2 hijos: a y ul, para que los elementos se pongan de forma 
+horizontal uso display:flex; */
+.container { /*Empuja hacia los costados y limita el ancho*/
+  max-width: var(--max-width-container);/*Limitar el ancho para que no crezca de más*/
+  margin: 0 auto; /*Truco para q centre el elemento. Cero hacia y abajo y automatico hacia los lados */
   padding-left: var(--padding-container);
   padding-right: var(--padding-container);
 }
 
+/* elements */
 .f-elements {
   display: flex;
 }
+/* fin elements */
 
+/* items */
 .f-elements--header {
-  align-items: center;
+  align-items: center;/*alinear de forma vertical*/
   justify-content: space-between;
 }
 
@@ -31,13 +37,68 @@
   align-items: center;
   justify-content: center;
 }
+/* fin items */
 
 .f-elements--responsive {
   flex-direction: column;
 }
+
 
 @media (min-width: 768px) {
   .f-elements--responsive {
     flex-direction: row;
   }
 }
+
+/* Porque las cajas de un div, no se ponen uno al lado del otro,
+si al ser un tamaño pequeño alcanzan en linea. Es porque un
+div es un bloque. Para ponerlos en linea debo hacer algo diferente,
+el inline no sirve para esto, puedo usar la propiedad, display: inline-block
+pero esto le da propiedades inline y block a la vez, agregandole espacios.
+
+Por eso vamos a usar display: flex; esto hace que el contenedor
+se convierte en un flex-container y a sus hijos en flex-item. Y esto
+hace que se pongan los elementos en linea y sin espacios.
+
+Ahora esto se convierte en cajas q se rigen en base a su padre y van a hacer
+que ocupen el espacio minimo disponible. Por defecto esto se ponene en fila,
+para cambiarlo en columna usamos flex-direction:column;
+
+.box-container{
+  display:flex;
+  height: 4rem;
+}
+Por defecto cuando no hay altura, los elementos hijos tratan de ocupar 
+todo el espacio.
+
+.box-container{
+  display:flex;
+  align-items:center;
+  height: 4rem;
+}
+Agregando la propiedad align-items: center; los elementos hijos
+se alinean de forma vertical. Pero asi como puedo alienar de forma
+vertical tambien puedo alinear de forma horizontal. Para eso
+uso justify-content.
+Existen diferentes valores para el justify-content
+space-around: que va agarrar todo el espacio disponible 
+horizotalmente y divide para que cada elemento tenga
+un espaciado igual.
+space-between: que va hacer que todos se peguen a las paredes
+de forma horizontal y de forma uniforme
+space-evenly: que va hacer que el espaciado de las cajas
+sean uniformes
+
+.box-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-<tipo de espaciado: betwen, evenly, around>;
+  height: 4rem;
+}
+
+.box{
+  width: 2rem;
+}
+*/
+
+/* El display: flex no se hereda a los hijos */

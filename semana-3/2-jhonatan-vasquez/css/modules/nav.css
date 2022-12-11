@@ -2,8 +2,8 @@
   --translate-list-header: 100%;
   --scale-menu: 1;
   --scale-close: 0;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;/*Espacio hacia adentro en la parte superior*/
+  padding-bottom: 0.75rem;/*Espacio hacia adentro en la parte de abajo*/
 }
 
 .nav:target {
