@@ -14,6 +14,7 @@
 </head>
 
 <body class="body">
+  <!-- Para dar estilos debemos asignar clases -->
   <header class="header">
     <nav class="nav" id="header-nav">
       <div class="container f-elements f-elements--header p-relative">
@@ -28,13 +29,13 @@
           <i class="bi bi-x-circle"></i>
         </a>
         <ul class="list list--header f-elements f-elements--center f-elements--responsive gap-md">
-          <li>
+          <li class="list__item">
             <a href="#hero" class="list__link">Perfil</a>
           </li>
-          <li>
+          <li class="list__item">
             <a href="#experiences" class="list__link">Experiencia</a>
           </li>
-          <li>
+          <li class="list__item">
             <a href="#contact" class="list__link">Contacto</a>
           </li>
         </ul>
@@ -75,7 +76,6 @@
         </div>
       </div>
     </article>
-    <hr />
     <section id="experiences">
       <div>
         <h2>👨‍💻 Experiencias 👨‍💻</h2>
@@ -135,7 +135,6 @@
         </table>
       </div>
     </section>
-    <hr />
     <section id="contact">
       <div>
         <h2>🤗 Contacto 🤗</h2>
@@ -145,41 +144,40 @@
         </form>
       </div>
     </section>
-    <hr />
   </main>
   <footer>
     <nav>
-      <ul>
+      <ul class="menu">
         <li>
-          <a href="https://www.youtube.com/@elliotgaramendi">
-            <img src="./assets/img/logo-youtube.svg" alt="YouTube" width="24" height="24" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/ElliotXLeo">
-            <img src="./assets/img/logo-github.svg" alt="GitHub" width="24" height="24" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/elliotgaramendi/">
-            <img src="./assets/img/logo-linkedin.svg" alt="LinkedIn" width="24" height="24" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/elliotgaramendi/">
-            <img src="./assets/img/logo-instagram.svg" alt="Instagram" width="24" height="24" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/elliotgaramendi">
-            <img src="./assets/img/logo-facebook.svg" alt="Facebook" width="24" height="24" />
-          </a>
-        </li>
-        <li>
-          <a href="https://elliotxleo.github.io/portafolio-web-elgs/">
-            <img src="./assets/img/logo-internet.svg" alt="Web" width="24" height="24" />
-          </a>
-        </li>
+            <a href="https://www.youtube.com/channel/UCE9whBrtYnLWrpzwk6z_JUA" class="menu__link">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ElliotXLeo" class="menu__link">
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/elliotgaramendi/" class="menu__link">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/elliotgaramendi/" class="menu__link">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/elliotgaramendi" class="menu__link">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://elliotxleo.github.io/portafolio-web-elgs/" class="menu__link">
+              <i class="bi bi-globe"></i>
+            </a>
+          </li>
       </ul>
       <h5>
         🦄 Copyright &copy;
