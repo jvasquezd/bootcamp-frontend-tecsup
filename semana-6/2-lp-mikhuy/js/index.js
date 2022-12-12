@@ -9,6 +9,12 @@ const listHeader = document.querySelector('.list--header');
 
 
 //const navMenuIcon = document.querySelector('#icon-menu');
+// elemento mas alto en todo js es window
+
+document.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scroll', window.scrollY>0);
+    //si  tienes la clase te lo quito y si no la tienes te lo asigna
+});
 
 iconMenu.addEventListener('click', () =>{
     //listHeader.style.pointerEvents = 'auto';
