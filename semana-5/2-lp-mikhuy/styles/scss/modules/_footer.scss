@@ -1,0 +1,42 @@
+.footer{
+    box-shadow: 0 0 0.0625rem 0.0625rem var(--primary-shadow-color);
+    margin-top: auto;
+
+    &__title{
+        position: relative;
+        color: var(--primary-highlight-color);
+        font-size: 0.875rem;
+        margin: 0;
+
+        &&::before{
+            content: '';
+            left: 0;
+            bottom: -0.25rem;
+            width: 2rem;
+            height: 0.125rem;
+            background-color: var(--secondary-highlight-color);
+        }
+
+        @include desktop{
+            font-size: 1rem;
+        }
+    }
+
+    &__subtitle{
+        font-size: 0.75rem;
+        font-weight: 300;
+        margin: 0;
+
+        @include desktop{
+            font-size: 0.875rem;
+        }
+    }
+
+    &__credits{
+        position: relative;
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin: 0;
+    }
+}

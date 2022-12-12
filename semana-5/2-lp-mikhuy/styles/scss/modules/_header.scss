@@ -6,4 +6,15 @@
     width: 100%;
     background-color: var(--primary-theme-color);
     box-shadow: 0 0 0.125rem var(--primary-shadow-color);
+
+    &--open{
+        left: -50%;
+    }
+    &--scroll{
+        background-color: var(--primary-theme-color);
+        box-shadow: 0 0 0.0625rem 0.0625rem var(--primary-shadow-color);
+    }
+    @include desktop{
+        left: 0;
+    }
 }
