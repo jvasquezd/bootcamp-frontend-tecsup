@@ -1,19 +1,123 @@
-/* Error: Undefined mixin.
- *    ,
- * 17 | /     @include desktop{
- * 18 | |         left: 0;
- * 19 | \     }
- *    '
- *   styles\scss\modules\_header.scss 17:5  @import
- *   styles\scss\fe.scss 3:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 17 \2502  \250c      @include desktop{\a 18 \2502  \2502          left: 0;\a 19 \2502  \2514      }\a    \2575 \a   styles\\scss\\modules\\_header.scss 17:5  @import\a   styles\\scss\\fe.scss 3:9                root stylesheet";
+.min-h-100vh {
+  min-height: 100vh;
 }
+
+.t-align-center {
+  text-align: center;
+}
+
+.f-direction-column {
+  flex-direction: column;
+}
+
+.gap-xs {
+  gap: calc(var(--padding-section) * 0.25);
+}
+
+.gap-sm {
+  gap: calc(var(--padding-section) * 0.5);
+}
+
+.a-self-center {
+  align-items: center;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.section {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  box-sizing: border-box;
+}
+.section__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+.section__subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+.section__text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding-left: var(--padding-container);
+  padding-right: var(--padding-container);
+}
+
+.f-elements {
+  display: flex;
+}
+.f-elements--header {
+  align-items: center;
+  justify-content: space-between;
+}
+.f-elements--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-theme-color);
+  box-shadow: 0 0 0.125rem var(--primary-shadow-color);
+}
+.header--open {
+  left: -50%;
+}
+.header--scroll {
+  background-color: var(--primary-theme-color);
+  box-shadow: 0 0 0.0625rem 0.0625rem var(--primary-shadow-color);
+}
+@media (min-width: 768px) {
+  .header {
+    left: 0;
+  }
+}
+
+.nav {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.nav__logo {
+  font-size: 1.75rem;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list__link {
+  display: flex;
+  background-color: var(--secondary-theme-color);
+  border-radius: var(--primary-border-radius);
+  color: var(--primary-text-color);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 1em;
+  transition: background-color 0.25s, color 0.25s;
+}
+.list__link:hover {
+  background-color: var(--primary-highlight-color);
+  color: var(--reverse-primary-theme-color);
+}
+
+/*# sourceMappingURL=fe.css.map */
