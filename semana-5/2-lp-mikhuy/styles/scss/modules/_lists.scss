@@ -7,15 +7,17 @@
         display: flex;
         background-color: var(--secondary-theme-color);
         border-radius: var(--primary-border-radius);
-        padding: 0.25rem 1em;
-        text-decoration: none;
         color: var(--primary-text-color);
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.25rem 1em;
         transition: background-color 0.25s, color 0.25s;
+
 
         // Referencio al mismo selector
         &:hover{
             background-color: var(--primary-highlight-color);
-            color: var(--primary-theme-color);
+            color: var(--reverse-primary-theme-color);
         }
     }
 
