@@ -39,4 +39,11 @@
         align-items: center;
         justify-content: center;
     }
+    &--responsive {
+        flex-direction: column;
+
+        @include desktop(){
+            flex-direction: row;
+        }
+    }
 }
