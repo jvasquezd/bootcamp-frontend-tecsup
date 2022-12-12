@@ -14,6 +14,17 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.25s;
+
+        // modo escritorio
+
+        @include desktop(){
+            position: static;
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            opacity: 1;
+            pointer-events: auto;
+        }
     }
 
     &--header-show{
