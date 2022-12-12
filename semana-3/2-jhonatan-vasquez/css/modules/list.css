@@ -5,19 +5,31 @@
   padding: 0;
 }
 
+/* Agrega la navegacion de forma vertical,
+ para el responsive */
 .list--header {
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 4rem);
+  position: fixed;/*posocion fija*/
+  top: 4rem;/*distancia de 4rem de arriba*/
+  left: 0;/*distancia cero de la izquierda*/
+  width: 100%; /*quiero q ocupe el 100%*/
+  height: calc(100% - 4rem); /*Si tu quieres quitar el excedente
+  quitamos loque se agrego en el top: 4rem*/
   background-color: var(--secondary-theme-color);
-  transform: translateX(var(--translate-list-header));
-  transition: transform 0.25s;
+  transform: translateX(var(--translate-list-header));/*El transform
+  me permite transformar el elemento. Quiero hacer un traslado en el eje x,
+  pero yo quiero q se mueva todo por eso uso translateX(100%). 
+  Ahora quiero q vuelva a su posicion original para poder
+  mostrar un menu "hamburguesa para mostrar opciones.
+  Nos dirigimos a nav.css para declarar la variable
+  que me permite hacer el traslado en el eje X*/
+
+  transition: transform 0.25s; /*Como es muy brusco la transicion de la
+  barra de navegacion, hago un suavizado de 0.25s
+  al traslado en el eje X.*/
 }
 
 .list__link {
-  position: relative;
+  position: relative;/*posicion que se le da al padre para que se posicione en base a el*/
   color: var(--primary-text-color);
   font-weight: 700;
   text-decoration: none;
@@ -30,7 +42,7 @@
 
 .list__link::before {
   content: '';
-  position: absolute;
+  position: absolute;/*Referencio a un padre diferente a static*/
   left: 0;
   bottom: -0.125rem;
   width: 0;
@@ -43,11 +55,16 @@
   width: 100%;
 }
 
+/* Media query para que se oculte la navgeacion de forma
+vertical y se muestre de forma horizontal en la parte de arriba.
+Esta media query dice, si como minimo tienes 768px para mas
+infinito se aplica los cambios que estan dentro de la media query
+*/
 @media (min-width: 768px) {
   .list--header {
-    position: static;
-    background-color: transparent;
-    width: auto;
-    height: auto;
+    position: static;/*posicion por defecto*/
+    background-color: transparent;/*color transparente*/
+    width: auto;/*width por defecto*/
+    height: auto;/*height por defecto*/
   }
 }

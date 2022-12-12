@@ -6,6 +6,7 @@
   flex: 1;
 }
 
+/* Para modificar el f-elements y ponerlo en columnas */
 .f-direction-column {
   flex-direction: column;
 }
@@ -39,6 +40,8 @@
 
 
 @media (min-width: 768px) {
+  /* Condicional para arreglar los links del ul 
+  en la barra de navegacion.Se pone el backslash */
   .md\:f-direction-row {
     flex-direction: row;
   }

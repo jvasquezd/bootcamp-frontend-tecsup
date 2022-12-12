@@ -1,14 +1,15 @@
 .section {
+  /* padding que empuja hacia adentro */
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
 }
 
 .section--hero {
   background-image: url('../../assets/img/fondo.webp');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  min-height: 100vh;
+  background-position: center; /*centrar imagen*/
+  background-size: cover;/*Para que la imagen no se deforme*/
+  box-sizing: border-box;/*para que respete el padding que le has dado y no se salga del 100vh*/
+  min-height: 100vh;/*Altura minima de toda la pantalla*/
 }
 
 
@@ -24,6 +25,8 @@ horizontal uso display:flex; */
 /* elements */
 .f-elements {
   display: flex;
+  /* flex-direction: column;
+  gap: var(--padding-section); */
 }
 /* fin elements */
 
@@ -34,8 +37,8 @@ horizontal uso display:flex; */
 }
 
 .f-elements--center {
-  align-items: center;
-  justify-content: center;
+  align-items: center;/*alinear de forma vertical*/
+  justify-content: center;/*alinear de forma horizontal*/
 }
 /* fin items */
 
