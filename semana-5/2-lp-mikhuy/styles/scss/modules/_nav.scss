@@ -1,0 +1,13 @@
+.nav{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    // Para autoreferenciar al selector padre y poder
+    // abreviar el nav__logo uso el aspersan  &
+    // nesting
+    &__logo{
+        font-size: 1.75rem;
+        text-decoration: none;
+    }
+
+}
+
