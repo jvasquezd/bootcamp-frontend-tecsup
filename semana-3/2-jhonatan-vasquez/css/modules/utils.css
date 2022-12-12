@@ -2,6 +2,11 @@
   position: relative;
 }
 
+/* Propiedad que resume el flex row, basic, sheet ,
+en forma resumida el factor de crecimiento. Para que no crezca de 
+forma desproporcionada. El factor de crecimiento hace q crezca
+de uno en uno y asi tengo 2 columnas uniformes sin necesidad 
+de porcentajes*/
 .flex-1 {
   flex: 1;
 }
