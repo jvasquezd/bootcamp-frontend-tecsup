@@ -1,24 +1,22 @@
 "use strict";
 
-const documentReady = () => {
-  const tBodyPokemons = document.getElementById("tBodyPokemons");
-  const formPokemon = document.getElementById("formPokemon");
+class Pokemon {
+  constructor(name, type, hp, attack, special, imgUrl){
+    this.name = name;
+    this.type = type;
+    this.hp = hp;
+    this.attack = attack;
+    this.special = special;
+    this.imgUrl = imgUrl;
+  }
+};
 
-  tBodyPokemons.innerHTML += `
-  <tr>
-    <td>1</td>
-    <td>Pikachu</td>
-    <td>Eléctrico</td>
-    <td>250</td>
-    <td>Trueno</td>
-    <td>Voltio</td>
-    <td>
-      <img
-        src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20150621181250/Pikachu.png/1200px-Pikachu.png"
-        alt="Pikachu" class="img-fluid" style="max-width: 128px;" />
-    </td>
-  </tr>
-  `;
+
+
+const documentReady = () => {
+  const pokemons = [];
+  //const tBodyPokemons = document.getElementById("tBodyPokemons");
+  const formPokemon = document.getElementById("formPokemon");
 
   const createPokemon = (e) => {
     e.preventDefault();
@@ -29,23 +27,34 @@ const documentReady = () => {
     const hp = documentFormPokemon.hp.value;
     const attack = documentFormPokemon.attack.value;
     const special = documentFormPokemon.special.value;
-    const imgUrl = documentFormPokemon.imgUrl.value;
+    const imgUrl = documentFormPokemon.imgUrl.value
 
-    tBodyPokemons.innerHTML += `
-    <tr>
-      <td>1</td>
-      <td>${name}</td>
-      <td>${type}</td>
-      <td>${hp}</td>
-      <td>${attack}</td>
-      <td>${special}</td>
-      <td>
-        <img
-          src="${imgUrl}"
-          alt="${name}" />
-      </td>
-    </tr>
-  `;
+    let pokemon = new Pokemon(name,type,hp,attack, special,imgUrl);
+    pokemons.push(pokemon);
+    readPokemons();
+  };
+
+  const readPokemons = () => {
+    const tBodyPokemons = document.getElementById("tBodyPokemons");
+    tBodyPokemons.innerHTML = '';
+    pokemons.forEach((element, index) =>{
+      const {name, type, hp, attack, special, imgUrl} = element;
+      tBodyPokemons.innerHTML += `
+      <tr>
+        <td>${index}</td>
+        <td>${name}</td>
+        <td>${type}</td>
+        <td>${hp}</td>
+        <td>${attack}</td>
+        <td>${special}</td>
+        <td>
+          <img
+            src="${imgUrl}"
+            alt="${name}" class="img-fluid" style="max-width: 128px;"/>
+        </td>
+      </tr>`
+    });
+    
   };
 
   formPokemon.addEventListener("submit", createPokemon);
